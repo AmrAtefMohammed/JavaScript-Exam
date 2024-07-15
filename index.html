@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>Yummy</title>
+
+        <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+
+        <link rel="stylesheet" href="css/all.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+    <body class="position-relative">
+
+        
+
+        <div class="loadingContainer w-100 vh-100">
+            <span class="loader"></span>
+        </div>
+        
+        
+        
+
+        
+
+
+        <section>
+            <nav class="position-fixed d-flex">
+                <div class="content d-flex justify-content-between flex-column py-5 px-4 min-vh-100">
+                    <div class="overflow-hidden">
+                        <ul class="fw-medium d-flex flex-column row-gap-4 position-relative">
+                            <li id="search">Search</li>
+                            <li id="categories">Categories</li>
+                            <li id="area">Area</li>
+                            <li id="ingredients">Ingredients</li>
+                            <li id="contact">Contact Us</li>
+                        </ul>
+                    </div>
+                    <div class="fw-medium">
+                        <div class="mb-1 icons">
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-solid fa-globe"></i>
+                        </div>
+                        <p>
+                            Copyright Â© 2019 All Rights
+                            <br>
+                            Reserved.
+                        </p>
+                    </div>
+                </div>
+            
+                <div class="control bg-white min-vh-100 px-2 py-5 d-flex flex-column justify-content-between align-items-center">
+                    <div>
+                        <img src="images/logo.png" alt="Logo" class="w-100 backHome cursor-pointer" height="85">
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-rectangle-xmark fa-3x closeNav d-none"></i>
+                        <i class="fa-solid fa-bars fa-3x openNav"></i>
+                    </div>
+                    <div class="d-flex flex-column row-gap-4 icons">
+                        <i class="fa-solid fa-globe fa-lg"></i>
+                        <i class="fa-solid fa-share-nodes fa-lg"></i>
+                    </div>
+                </div>
+            </nav>
+
+            
+
+            <div class="main container p-5 position-relative min-vh-100">
+                <div class="searchContainer w-75 mx-auto mb-5 d-none">
+                    <div class="container">
+                        <h2 class="w-50 mx-auto text-bg-primary text-center py-2 rounded-4 mb-3">Search</h2>
+                        <div class="row row-gap-3">
+                            <div class="col-md-6">
+                                <div>
+                                    <input type="text" class="form-control searchNameInput" placeholder="Search By Name">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div>
+                                    <input type="text" class="form-control searchFirstNameInput"
+                                        placeholder="Search By First Letter" maxlength="1">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form vh-100 d-flex justify-content-center align-items-center d-none">
+                    <div class="container w-75">
+                        <h2 class="text-center text-bg-success py-3 rounded-5 my-5 fs-1">Contact US</h2>
+                        <div class="row row-gap-4">
+                            <div class="col-md-6">
+                                <div>
+                                    <input type="text" class="form-control inputContact" placeholder="Enter your name..." id="nameInput">
+                                    <p class="text-bg-danger rounded-4 mt-3 mb-0 text-center py-3 px-4 d-none">Special characters and numbers not allowed</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div>
+                                    <input type="email" class="form-control inputContact" placeholder="Enter your email..." id="emailInput">
+                                    <p class="text-bg-danger rounded-4 mt-3 mb-0 text-center py-3 px-4 d-none">Email not valid *exemple@yyy.zzz</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div>
+                                    <input type="text" class="form-control inputContact" placeholder="Enter your phone..." maxlength="11" id="phoneInput">
+                                    <p class="text-bg-danger rounded-4 mt-3 mb-0 text-center py-3 px-4 d-none">Enter valid Phone Number</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div>
+                                    <input type="number" class="form-control inputContact" placeholder="Enter your age" id="ageInput">
+                                    <p class="text-bg-danger rounded-4 mt-3 mb-0 text-center py-3 px-4 d-none">Enter valid age</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div>
+                                    <input type="password" class="form-control inputContact" placeholder="Enter your password" id="passwordInput">
+                                    <p class="text-bg-danger rounded-4 mt-3 mb-0 text-center py-3 px-4 d-none">Enter valid password *Minimum eight characters, at least one letter and one number:*</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div>
+                                    <input type="password" class="form-control inputContact" placeholder="Enter repassword" id="repasswordInput">
+                                    <p class="text-bg-danger rounded-4 mt-3 mb-0 text-center py-3 px-4 d-none">Enter valid repassword</p>
+                                </div>
+                            </div>
+                            <div class="col-md-12 text-center">
+                                <button class="btn btn-danger px-3" disabled id="btnSubmit">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="loadingInside d-none position-absolute top-0 bottom-0 start-0 end-0 d-grid">
+                    <span class="loader m-auto"></span>
+                </div>
+
+                <div class="row row-gap-4 mealsContainer">
+                    
+                    <!-- <div class="col-md-3">
+                                <div class="imageContainer position-relative">
+                                    <img src="images/58oia61564916529.jpg" class="w-100" alt="">
+            
+                                    <div class="imageHover d-flex align-items-center justify-content-center position-absolute w-100 h-100">
+                                        <h2 class="text-black fw-medium">Soup</h2>
+                                    </div>
+                                </div>
+                            </div> -->
+
+
+                    <!-- <div class="col-md-4">
+                        <div>
+                            <img src="images/58oia61564916529.jpg" class="w-100 rounded-4" alt="">
+                            <h2 class="my-3">Kumper</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <h2>Instructions</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate beatae magni sint eos vero nostrum corrupti molestias ducimus quae. Quisquam doloribus ex in odio? Enim totam praesentium blanditiis quos debitis qui, alias atque recusandae, assumenda id in neque itaque iusto perferendis tenetur! Iure vitae, odio consectetur nulla molestiae voluptatibus assumenda! Placeat similique quidem eum modi delectus laudantium necessitatibus esse commodi quae libero autem, aut velit possimus! Quibusdam aperiam nobis voluptatibus.</p>
+                        <h3>Area: Turkish</h3>
+                        <h3>Category: Side</h3>
+                        <h3>Recipes:</h3>
+                        <div class="recipesContainer d-flex align-items-center gap-2 flex-wrap my-3">
+                            <span>2 large Potatoes</span>
+                            <span>2 large Potatoes</span>
+                            <span>2 large Potatoes</span>
+                            <span>2 large Potatoes</span>
+                            <span>2 large Potatoes</span>
+                            <span>2 large Potatoes</span>
+                            <span>2 large Potatoes</span>
+                        </div>
+                        <h3>Tags:</h3>
+                        <div class="mb-4">
+                            <span class="tags bg-primary my-2">Dish</span>
+                        </div>
+
+
+                        <a class="btn btn-success mx-2" href="" target="_blank">Source</a>
+                        <a class="btn btn-danger" href="" target="_blank">Youtube</a>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+
+        
+        
+        
+        
+
+
+
+
+        <script src="js/jquery-3.7.1.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>

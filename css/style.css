@@ -1,0 +1,181 @@
+body{
+    --mainColor: #0D0D0D;
+    --mainTextColor: #f9f6f6;
+
+
+    background-color: var(--mainColor);
+    color: var(--mainTextColor);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+span{
+    display: inline-block;
+}
+
+
+body, html{
+    overflow: hidden;
+}
+
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+ul{
+    list-style: none;
+}
+
+
+/*              Loading              */
+
+.loadingContainer{
+    background-color: rgba(0, 0, 0, 0.742);
+    display: grid;
+}
+.loadingContainer span.loader{
+    margin: auto;
+}
+
+.loader {
+    display: block;
+    position: relative;
+    height: 30px;
+    width: 200px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.loader:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background: #FF3D00;
+    animation: 2s prog ease-in infinite;
+}
+
+@keyframes prog {
+    to {
+        width: 100%;
+    }
+}
+
+
+/*              Loading inside              */
+
+.loadingInside{
+    z-index: 50;
+}
+.loadingInside .loader{
+    width: 250px;
+    height: 45px;
+}
+
+
+
+/*              Navbar              */
+
+
+nav{
+    z-index: 100;
+    left: 0;
+}
+
+nav i,
+nav .content ul li{
+    cursor: pointer;
+}
+nav .icons i{
+    transition: all 0.333s;
+}
+nav .icons i:hover{
+    color: rgba(255, 0, 0, 0.747);
+}
+
+
+nav .content{
+    font-size: 18px;
+    background-color: var(--mainColor);
+}
+nav .content ul{
+    padding: 0;
+    top: 100%;
+}
+nav .content ul li{
+    transition: all 0.333s;
+}
+nav .content ul li:hover{
+    color: rgba(0, 0, 255, 0.696)
+}
+
+
+nav .control{
+    color: var(--mainColor);
+}
+nav .control .closeNav,
+nav .control .openNav{
+    transition: all 0.333s;
+}
+nav .control .closeNav:hover,
+nav .control .openNav:hover{
+    color: red;
+}
+
+
+
+
+
+
+/*              Main              */
+
+div.main .imageContainer{
+    border-radius: 20px;
+    overflow: hidden;
+}
+div.main div.imageHover{
+    background-color: rgba(128, 128, 128, 0.89);
+    transition: all 0.75s;
+    top: 100%;
+}
+div.main div.imageContainer:hover .imageHover{
+    top: 0;
+}
+
+
+
+
+
+/*              Search              */
+
+div.searchContainer input{
+    background-color: var(--mainColor);
+    color: var(--mainTextColor) !important;
+    padding-block: 10px;
+}
+div.searchContainer input::placeholder{
+    color: grey;
+}
+div.searchContainer input:focus{
+    background-color: var(--mainColor);
+}
+
+
+
+
+
+
+/*              Meal Details              */
+div.recipesContainer span{
+    padding: 5px 8px;
+    background-color: #055160;
+    color: #cff4fc;
+    border-radius: 12px;
+}
+
+.tags{
+    padding: 5px 8px;
+    border-radius: 4px;
+}
